@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package>
-  <name>hypha_racecar</name>
+  <name>tianbot_racecar</name>
   <version>0.0.0</version>
-  <description>The hypha_racecar package</description>
+  <description>The tianbot_racecar package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
-  <maintainer email="hypha.ros@gmail.com">Hypha ROS Workshop</maintainer>
+  <maintainer email="hypha.ros@gmail.com">Tianbot ROS Workshop</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

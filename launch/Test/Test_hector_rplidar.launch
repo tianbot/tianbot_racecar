@@ -19,7 +19,7 @@
     <node pkg="tf" type="static_transform_publisher" name="base_frame_2_laser_link" args="0 0 0 0 0 0 /base_frame /laser 100"/> 
 
     <!--  -->
-    <include file="$(find hypha_racecar)/launch/includes/default_mapping.launch.xml"> 
+    <include file="$(find tianbot_racecar)/launch/includes/default_mapping.launch.xml"> 
         <arg name="base_frame" value="base_frame"/>
         <arg name="odom_frame" value="base_frame"/>
         <arg name="pub_map_odom_transform" value="true"/>

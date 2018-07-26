@@ -1,22 +1,22 @@
 /*
-Copyright (c) 2017, ChanYuan KUO, YoRu LU,
-latest editor: HaoChih, LIN
-All rights reserved. (Hypha ROS Workshop)
+Copyright (c) 2017, Tianbot,
+latest editor: Bo,Tian
+All rights reserved. (Tianbot ROS Workshop)
 
-This file is part of hypha_racecar package.
+This file is part of tianbot_racecar package.
 
-hypha_racecar is free software: you can redistribute it and/or modify
+tianbot_racecar is free software: you can redistribute it and/or modify
 it under the terms of the GNU LESSER GENERAL PUBLIC LICENSE as published
 by the Free Software Foundation, either version 3 of the License, or
 any later version.
 
-hypha_racecar is distributed in the hope that it will be useful,
+tianbot_racecar is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU LESSER GENERAL PUBLIC LICENSE for more details.
 
 You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
-along with hypha_racecar.  If not, see <http://www.gnu.org/licenses/>.
+along with tianbot_racecar.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <iostream>
@@ -394,7 +394,7 @@ void L1Controller::controlLoopCB(const ros::TimerEvent&)
                 //double u = getGasInput(carVel.linear.x);
                 //cmd_vel.linear.x = baseSpeed - u;
                 cmd_vel.linear.x = baseSpeed;
-                ROS_INFO("\nGas = %.2f\nSteering angle = %.2f",cmd_vel.linear.x,cmd_vel.angular.z);
+                ROS_DEBUG("\nGas = %.2f\nSteering angle = %.2f",cmd_vel.linear.x,cmd_vel.angular.z);
             }
         }
     }

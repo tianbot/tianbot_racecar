@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(hypha_racecar)
+project(tianbot_racecar)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
@@ -40,7 +40,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   CATKIN_DEPENDS visualization_msgs
 #  INCLUDE_DIRS include
-#  LIBRARIES hypha_racecar
+#  LIBRARIES tianbot_racecar
 #  CATKIN_DEPENDS geometry_msgs move_base roscp rospy std_msgs visualization_msgs
 #  DEPENDS system_lib
 )
@@ -59,9 +59,9 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/hypha_racecar.cpp
+#   src/${PROJECT_NAME}/tianbot_racecar.cpp
 # )
 
 add_executable(L1_controller_v2 src/L1_controller_v2.cpp)
 target_link_libraries(L1_controller_v2 ${catkin_LIBRARIES})
-add_dependencies(L1_controller_v2 hypha_racecar_generate_messages_cpp)
+add_dependencies(L1_controller_v2 tianbot_racecar_generate_messages_cpp)

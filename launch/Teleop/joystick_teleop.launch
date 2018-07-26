@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="joy" type="joy_node" name="joystick">
+		<param name="dev" value="/dev/tianbot_racecar_joystick" />
+	</node>
+    <node pkg="tianbot_racecar" type="racecar_joy.py" name="racecar_joy"/>
+</launch>

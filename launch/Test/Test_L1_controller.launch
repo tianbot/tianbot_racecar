@@ -2,7 +2,7 @@
 
 <launch>
     <!-- L1 controller -->  
-    <node pkg="hypha_racecar" type="L1_controller_v2" respawn="false" name="L1_controller_v2" output="screen">       
+    <node pkg="tianbot_racecar" type="L1_controller_v2" respawn="false" name="L1_controller_v2" output="screen">       
         <!-- L1 -->
         <param name="Vcmd" value="1.0" /> <!-- speed of car m/s -->        
         <!-- ESC -->

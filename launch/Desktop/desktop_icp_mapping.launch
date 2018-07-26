@@ -6,12 +6,12 @@
 
     <!--PLAY BAG FILE-->
     <param name="use_sim_time" value="true" />
-    <node pkg="rosbag" type="play" name="player" output="screen" args="$(find hypha_racecar)/bags/hypha_basement.bag --clock"/>
+    <node pkg="rosbag" type="play" name="player" output="screen" args="$(find tianbot_racecar)/bags/hypha_basement.bag --clock"/>
 
     <group if="$(arg use_odom)">
         <!-- Robot_Localization -->
         <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-            <rosparam command="load" file="$(find hypha_racecar)/param/hypha_ekf_params_bag.yaml" />
+            <rosparam command="load" file="$(find tianbot_racecar)/param/hypha_ekf_params_bag.yaml" />
         </node>
     </group>
 
@@ -30,5 +30,5 @@
     <node pkg="mrpt_icp_slam_2d" type="mrpt_icp_slam_2d" name="mrpt_icp_slam_2d" output="screen"></node>
 
     <!-- Rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find hypha_racecar)/rviz_cfg/hypha_gmapping.rviz" if="$(arg use_rviz)"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianbot_racecar)/rviz_cfg/hypha_gmapping.rviz" if="$(arg use_rviz)"/>
 </launch>

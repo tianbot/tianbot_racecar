@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "remap the device serial port(ttyUSBX) to rplidar racecar and imu"
+echo "check it using the command : ls -l /dev|grep ttyUSB"
+
+sudo cp ./_udev_/*.rules  /etc/udev/rules.d
+
+echo " "
+echo "Restarting udev"
+echo ""
+sudo service udev reload
+sudo service udev restart
+
+echo "finish "
+echo "BY Maxwell AT:2018.07.07"
