@@ -6,10 +6,12 @@
     <!-- TF setting -->
     <include file="$(find tianbot_racecar)/launch/includes/hypha_car_tf.launch.xml" />
 
-    <!-- RPLidar -->
+    <!-- RPLidar 
     <include file="$(find tianbot_racecar)/launch/includes/rplidar.launch.xml" />
-    <!-- IMU -->
+    -->
+    <!-- IMU 
     <include file="$(find tianbot_racecar)/launch/includes/gy85.launch.xml" />
+    -->
 
     <!--rf2o_Laser_Odometry-->
     <include file="$(find tianbot_racecar)/launch/includes/hypha_rf2o.launch.xml" />
