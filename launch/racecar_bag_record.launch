@@ -16,7 +16,7 @@
     <!-- IMU -->
     <!--include file="$(find tianbot_racecar)/launch/includes/gy85.launch.xml" /-->
     <!-- Arduino -->
-    <!--include file="$(find tianbot_racecar)/launch/RACECAR_core.launch" /-->
+    <!--include file="$(find tianbot_racecar)/launch/racecar_core.launch" /-->
 
     <!-- Odometry -->
     <!--rf2o_Laser_Odometry-->
