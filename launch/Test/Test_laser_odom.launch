@@ -4,7 +4,7 @@
     <arg name="use_rviz" default="false" />
 
     <!-- TF setting -->
-    <include file="$(find tianbot_racecar)/launch/includes/hypha_car_tf.launch.xml" />
+    <include file="$(find tianbot_racecar)/launch/includes/tianbot_racecar_tf.launch.xml" />
 
     <!-- RPLidar 
     <include file="$(find tianbot_racecar)/launch/includes/rplidar.launch.xml" />

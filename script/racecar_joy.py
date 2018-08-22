@@ -6,10 +6,14 @@ from geometry_msgs.msg import Twist
 
 twist = Twist()
 
-def callback(data):
+#init speed. in case of random num
+twist.linear.x = 1500
+twist.angular.z = 90
 
-	twist.linear.x = 1500
-	twist.angular.z = 90
+def callback(data):
+        #reset the speed every cycle. 
+        twist.linear.x = 1500
+        twist.angular.z = 90
 
 	if data.buttons[4]==1:
 		twist.linear.x = int(1500 + data.axes[1] * 500)
@@ -24,10 +28,11 @@ def joystick_controller():
 	pub = rospy.Publisher('~/car/cmd_vel', Twist, queue_size=5)
 
 	rospy.Subscriber('/joy', Joy, callback)
-	rate = rospy.Rate(10)
+	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():
 	    pub.publish(twist)
 	    rate.sleep()
+
 
 if __name__ == '__main__':
 	joystick_controller()

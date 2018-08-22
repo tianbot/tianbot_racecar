@@ -13,7 +13,9 @@ from std_msgs.msg import Int16,Int32, Int64, Float32, String, Header, UInt64
 #Importing ROS data type for IMU
 from sensor_msgs.msg import Imu
 
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, Quaternion
+
+from tf.transformations import *
 
 #Class to handle serial data from TianBot_RACECAR and converted to ROS topics
 class TianBot_RACECAR_Class(object):
@@ -60,13 +62,13 @@ class TianBot_RACECAR_Class(object):
 #######################################################################################################################
 #Subscribers and Publishers of IMU data topic
 
-		self.frame_id = '/IMU_link'
+		self.frame_id = 'IMU_link'
 
 	        self.cal_offset = 0.0
         	self.orientation = 0.0
         	self.cal_buffer =[]
         	self.cal_buffer_length = 1000
-        	self.imu_data = Imu(header=rospy.Header(frame_id="imu_link"))
+        	self.imu_data = Imu(header=rospy.Header(frame_id="IMU_link"))
         	self.imu_data.orientation_covariance = [0.0025,0,0,0,0.0025,0,0,0,0.0025]
 	        self.imu_data.angular_velocity_covariance = [0.02,0,0,0,0.02,0,0,0,0.02]
         	self.imu_data.linear_acceleration_covariance = [0.04,0,0,0,0.04,0,0,0,0.04]
@@ -145,13 +147,14 @@ class TianBot_RACECAR_Class(object):
 					imu_msg.angular_velocity_covariance = self.imu_data.angular_velocity_covariance
 					imu_msg.linear_acceleration_covariance = self.imu_data.linear_acceleration_covariance 
 
-
 					imu_msg.orientation.x = self._qx
 					imu_msg.orientation.y = self._qy
 					imu_msg.orientation.z = self._qz
 					imu_msg.orientation.w = self._qw
-
-					self.imu_pub.publish(imu_msg)
+                                        #q_rot = quaternion_from_euler(self.pi, -self.pi/2, 0)
+                                        #q_ori = Quaternion(self._qx, self._qy, self._qz, self._qw)
+                                        #imu_msg.orientation = quaternion_multiply(q_ori, q_rot)
+                                        self.imu_pub.publish(imu_msg)
 
 			except:
 				rospy.logwarn("Error in Sensor values")
