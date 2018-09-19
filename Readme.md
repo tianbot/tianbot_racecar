@@ -1,5 +1,7 @@
 
-全新的Tianbot Racecar,详细的操作手册以及硬件配置请参考石墨文档
+# 全新的Tianbot Racecar
+
+详细的操作手册以及硬件配置请参考石墨文档
 硬件全新升级，建图算法升级。更快，更稳！
 https://shimo.im/docs/6KqMwKleaQoP4Wkt
 
