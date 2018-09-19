@@ -1,3 +1,11 @@
+全新的Tianbot Racecar,详细的操作手册以及硬件配置请参考石墨文档
+硬件全新升级，建图算法升级。更快，更稳！
+https://shimo.im/docs/6KqMwKleaQoP4Wkt
+
+
+
+We developed the new Tianbot Racecar based on Hypha racecar.
+
 # HyphaROS RaceCar pkg
 ![alt text](https://github.com/Hypha-ROS/hypha-racecar/blob/ver.1-release/document/logo/HyphaROS_logo_2.png)  
 
@@ -28,48 +36,5 @@ Developer:
 Date: 2017/09/29  
 License: LGPL  
 
-## Features
-* onboard mapping (ICP, Gmapping)  
-* EKF for odometry (Laser Odom + IMU, robot_localization pkg)  
-* AMCL localization  
-* L1 base controller  
-* Dynamic obstacle avoidance  
-
-## Roadmap
-* Hypha RaceCar ver.2   
-* Teb_local_planner  
-* Autonomous parking  
-* SVO for odometry estimation  
-* Video tutorial  
-
-## Hardware 
-![alt text](https://github.com/Hypha-ROS/hypha-racecar/blob/ver.1-release/document/logo/HyphaRaceCar.jpg)  
-[google doc] https://goo.gl/9bx72b  
-[baidu doc] http://pan.baidu.com/s/1c2ImUrQ  
-Total Cost: < 600 USD  
-
-## Software
-### Odroid Image
-Image file for odroid.(with SD card >16G)  
-[Google drive] https://drive.google.com/open?id=0B7f-a3PiitSec3RyQWRTQVZ1NzA  
-
-### Desktop Windows 
-64bit RAM >= 8G  
-VirtualBox 64bit (https://www.virtualbox.org/wiki/Downloads)  
-VirtualBox OVA file：  Will be released soon!
-
-### Desktop Ubuntu (16.04) 
-64bit RAM > 4G  
-Install ROS Kinetic - (Desktop-Full Install)   (http://wiki.ros.org/kinetic/Installation/Ubuntu)  
-
-$ sudo apt-get install git ros-kinetic-rplidar-ros remmina synaptic gimp ros-kinetic-navigation ros-kinetic-hector-slam ros-kinetic-hector-mapping arduino ros-kinetic-geographic-msgs ros-kinetic-rosserial-arduino ros-kinetic-rosserial ros-kinetic-slam-gmapping ros-kinetic-mrpt-slam ros-kinetic-mrpt-icp-slam-2d ros-kinetic-robot-localization -y  
-
-create your own catkin_ws   
-(http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment#Create_a_ROS_Workspace)  
-$ cd catkin_ws/src  
-$ git clone https://github.com/MAPIRlab/rf2o_laser_odometry  
-$ git clone https://github.com/Hypha-ROS/hypha-racecar   
-$ cd ..  
-$ catkin_make  
 
 
