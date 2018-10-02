@@ -2,7 +2,11 @@
 
 <launch>
     <node pkg="joy" type="joy_node" name="joystick">
-		<param name="dev" value="/dev/tianbot_racecar_joystick" />
-	</node>
-    <node pkg="tianbot_racecar" type="racecar_joy.py" name="racecar_joy"/>
+        <param name="dev" value="/dev/tianbot_racecar_joystick" />
+    </node>
+
+    <node pkg="tianbot_racecar" type="racecar_joy.py" name="racecar_joy">
+        <!-- for logitech, check if the joypad is set to d mode -->
+        <param name="joy_mode" value="D" />
+    </node>
 </launch>
