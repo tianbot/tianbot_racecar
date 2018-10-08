@@ -1,5 +1,7 @@
 <launch>
   <include file="$(find tianbot_racecar)/launch/racecar_core.launch" />
   <include file="$(find tianbot_racecar)/launch/Teleop/joystick_teleop.launch" />
-  <include file="$(find tianbot_racecar)/launch/Device/rplidar.launch" />
+  <!--include file="$(find tianbot_racecar)/launch/Device/rplidar.launch" /-->
+  <include file="$(find tianbot_racecar)/launch/Device/rs_camera.launch" />
+  <include file="$(find tianbot_racecar)/launch/includes/tianbot_racecar_tf.launch.xml" />
 </launch>
