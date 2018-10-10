@@ -17,13 +17,13 @@ def callback(data):
     
     if joy_mode == "d" or joy_mode == "D":
         if data.buttons[4]==1:
-            twist.linear.x = int(1500 + data.axes[1] * 500)
+            twist.linear.x = int(1500 + data.axes[1] * 150)
 
         if data.buttons[5]==1:
             twist.angular.z = int(90 + 30 * data.axes[2])
     elif joy_mode == "x" or joy_mode == "X":
         if data.buttons[4]==1:
-            twist.linear.x = int(1500 + data.axes[1] * 500)
+            twist.linear.x = int(1500 + data.axes[1] * 150)
 
         if data.buttons[5]==1:
             twist.angular.z = int(90 + 30 * data.axes[3])
