@@ -34,3 +34,6 @@
 # Something else
 *.DS_Store
 *.swp
+
+# Keep changing so ignored..
+*.pyc
