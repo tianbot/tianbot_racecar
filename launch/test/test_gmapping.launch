@@ -6,7 +6,7 @@
     <arg name="use_rviz" default="false" />
 
     <!-- TF setting -->
-    <include file="$(find tianbot_racecar)/launch/includes/hypha_car_tf.launch.xml" />
+    <include file="$(find tianbot_racecar)/launch/includes/tianbot_racecar_tf.launch.xml" />
 
     <!-- SENSOR DEVICE -->
     <!-- RPLidar -->
@@ -21,10 +21,10 @@
 
 	<!-- ODOMETRY -->
     <!--rf2o_Laser_Odometry-->
-    <include file="$(find tianbot_racecar)/launch/includes/hypha_rf2o.launch.xml" />
+    <include file="$(find tianbot_racecar)/launch/includes/tianbot_rf2o.launch.xml" />
     <!-- Robot_Localization -->
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-        <rosparam command="load" file="$(find tianbot_racecar)/param/hypha_ekf_params.yaml" />
+        <rosparam command="load" file="$(find tianbot_racecar)/param/tianbot_ekf_params.yaml" />
     </node>
 
     <!-- gmapping -->
@@ -63,6 +63,6 @@
     </node>
 
     <!-- Rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianbot_racecar)/rviz_cfg/hypha_gmapping.rviz" if="$(arg use_rviz)"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianbot_racecar)/rviz_cfg/tianbot_gmapping.rviz" if="$(arg use_rviz)"/>
 
 </launch>
