@@ -1,0 +1,11 @@
+[Unit]
+Description=Run racecar core service
+After=NetworkManager-wait-online.service
+
+[Service]
+ExecStart=/usr/local/bin/tianbot_racecar_core.sh
+Restart=on-abort
+User=tianbot
+
+[Install]
+WantedBy=multi-user.target
