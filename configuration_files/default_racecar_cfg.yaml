@@ -1,0 +1,8 @@
+# This file is ignored in .gitignore and will not be update when git pull or git clone
+
+# This configuration is specified for your car so please keep it personally
+
+tianbot_racecar_config:
+  servo_reverse: "normal" # normal, reverse
+  laser_scanner: "rplidar" # rplidar, velodyne, hokuyo
+  rgbd_camera: "realsense_d400" # realsense_r200, astra

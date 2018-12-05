@@ -35,5 +35,6 @@
 *.DS_Store
 *.swp
 
-# Keep changing so ignored..
-*.pyc
+
+# specific cfg
+my_racecar_cfg.yaml
