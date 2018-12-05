@@ -39,7 +39,8 @@ class TianBot_RACECAR_Class(object):
         #Get serial port and baud rate of Tiva C TianBot_RACECAR
         port = rospy.get_param("~port", "/dev/ttyUSB0")
         baudRate = int(rospy.get_param("~baudrate", 115200))
-
+        self._servo_direction = int(rospy.get_param("~servo_direction", 1))
+        self._motor_direction = int(rospy.get_param("~motor_direction", 1))
 #######################################################################################################################
         rospy.loginfo("Starting with serial port: " + port + ", baud rate: " + str(baudRate))
         #Initializing SerialDataGateway with port, baudrate and callback function to handle serial data
@@ -96,8 +97,8 @@ class TianBot_RACECAR_Class(object):
 #######################################################################################################################
     def _Update_Speed(self, speed):
 
-        self._motor = speed.linear.x
-        self._servo = speed.angular.z
+        self._motor = 1500 + self._motor_direction*(speed.linear.x - 1500)
+        self._servo = 90 + self._servo_direction*(speed.angular.z - 90)
 
         speed_message = 's %d %d\r' %(int(self._servo),int(self._motor))
 
