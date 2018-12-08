@@ -1,4 +1,5 @@
 <launch>
+  <include file="$(find tianbot_racecar)/launch/my_racecar_cfg.launch.xml" />
   <include file="$(find tianbot_racecar)/launch/includes/tianbot_racecar_tf.launch.xml" />
   <include file="$(find tianbot_racecar)/launch/racecar_core.launch" />
   <include file="$(find tianbot_racecar)/launch/teleop/joystick_teleop.launch" />
