@@ -1,9 +1,11 @@
 <launch>
-  <include file="$(find tianbot_racecar)/launch/my_racecar_cfg.launch.xml" />
+  <!-- include file="$(find tianbot_racecar)/launch/my_racecar_cfg.launch.xml" /-->
+  <arg name="laser" default="rplidar_a2" />
+  <arg name="config_file" value="$(find tianbot_racecar)/launch/my_racecar_cfg.launch.xml" />
   <include file="$(find tianbot_racecar)/launch/includes/tianbot_racecar_tf.launch.xml" />
   <include file="$(find tianbot_racecar)/launch/racecar_core.launch" />
   <include file="$(find tianbot_racecar)/launch/teleop/joystick_teleop.launch" />
-  <include file="$(find tianbot_racecar)/launch/device/rplidar.launch" />
+  <include file="$(find tianbot_racecar)/launch/device/rplidar.launch" unless="$(eval laser=='rplidar_a3')" />
   <!--include file="$(find tianbot_racecar)/launch/device/rs_camera.launch" /-->
 
   <!-- ODOMETRY -->

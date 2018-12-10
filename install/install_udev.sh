@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "remap the device serial port(ttyUSBX) to rplidar racecar and imu"
+echo "remap the device serial port(ttyUSBX) to rplidar and racecar"
 echo "check it using the command : ls -l /dev|grep ttyUSB"
 
 sudo cp ./_udev_/*.rules  /etc/udev/rules.d

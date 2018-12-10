@@ -1,3 +1,0 @@
-KERNEL=="ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE:="0666", GROUP:="dialout",  SYMLINK+="racecar"
-ACTION=="add", ENV{DEVNAME}=="/dev/ttyUSB*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", RUN+="/bin/systemctl start tianbot_racecar_core.service"
-ACTION=="remove", ENV{DEVNAME}=="/dev/ttyUSB*", ENV{ID_VENDOR_ID}=="0403", ENV{ID_MODEL_ID}=="6001", RUN+="/bin/systemctl stop tianbot_racecar_core.service"
