@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="racecar_teleop" type="racecar_keyop.py" name="racecar_keyop">
+    </node>
+</launch>

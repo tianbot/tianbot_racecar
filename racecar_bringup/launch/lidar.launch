@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="lidar" default="$(optenv TIANBOT_RACECAR_LIDAR rplidar_a2)" />
+
+  <include if="$(eval 'rplidar' in lidar)" file="$(find racecar_bringup)/launch/includes/rplidar.launch.xml">
+    <arg name="lidar" value="$(arg lidar)" />
+  </include>
+</launch>

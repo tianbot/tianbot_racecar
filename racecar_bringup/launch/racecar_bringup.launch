@@ -1,0 +1,15 @@
+<launch>
+    <include file="$(find racecar_description)/launch/tianbot_racecar_tf.launch" />
+    <include file="$(find racecar_core)/launch/racecar_core.launch" />
+    <include file="$(find racecar_teleop)/launch/joystick_teleop.launch" />
+    <include file="$(find racecar_bringup)/launch/lidar.launch" />
+    <include file="$(find racecar_bringup)/launch/rgbd_camera.launch" />
+  
+    <!-- ODOMETRY -->
+    <!--rf2o_Laser_Odometry -->
+    <include file="$(find racecar_bringup)/launch/includes/tianbot_rf2o.launch.xml" />
+    <!-- Robot_Localization -->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find racecar_bringup)/param/tianbot_ekf_params.yaml" />
+    </node>
+</launch>

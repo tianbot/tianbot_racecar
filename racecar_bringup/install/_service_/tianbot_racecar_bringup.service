@@ -1,0 +1,21 @@
+[Unit]
+
+Description=Run racecar core service
+
+After=rc-local.service network.service
+
+
+
+[Service]
+
+ExecStart=/usr/local/bin/tianbot_racecar_bringup.sh
+
+Restart=on-abort
+
+User=tianbot
+
+
+
+[Install]
+
+WantedBy=multi-user.target
