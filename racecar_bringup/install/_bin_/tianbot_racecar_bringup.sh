@@ -8,4 +8,4 @@ export ROS_MASTER_URI=http://localhost:11311
 
 # export ROS_IP=${IP}
 
-roslaunch tianbot_racecar racecar_bringup.launch
+roslaunch racecar_bringup racecar_bringup.launch

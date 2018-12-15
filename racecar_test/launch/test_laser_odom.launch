@@ -3,11 +3,20 @@
 <launch>
     <arg name="use_rviz" default="false" />
 
+    <!-- racecar tf -->
+    <include file="$(find racecar_description)/launch/tianbot_racecar_tf.launch" />
+
+    <!-- lidar -->
+    <include file="$(find racecar_bringup)/launch/lidar.launch" />
+
+    <!-- racecar core -->
+    <include file="$(find racecar_core)/launch/racecar_core.launch" />
+
     <!--rf2o_Laser_Odometry-->
-    <include file="$(find tianbot_racecar)/launch/includes/tianbot_rf2o.launch.xml" />
+    <include file="$(find racecar_bringup)/launch/includes/tianbot_rf2o.launch.xml" />
     <!-- Robot_Localization -->
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-        <rosparam command="load" file="$(find tianbot_racecar)/param/tianbot_ekf_params.yaml" />
+        <rosparam command="load" file="$(find racecar_bringup)/param/tianbot_ekf_params.yaml" />
     </node>
     
     <!-- Rviz -->
