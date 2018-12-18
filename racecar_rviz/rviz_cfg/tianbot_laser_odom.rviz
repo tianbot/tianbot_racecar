@@ -185,7 +185,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: IMU_link
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:

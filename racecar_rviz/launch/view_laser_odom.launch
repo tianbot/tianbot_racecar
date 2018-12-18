@@ -4,6 +4,6 @@
     <arg name="use_rviz" default="true" />
 
     <!-- Rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianbot_racecar)/rviz_cfg/hypha_laser_odom.rviz" if="$(arg use_rviz)"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find racecar_rviz)/rviz_cfg/tianbot_laser_odom.rviz" if="$(arg use_rviz)"/>
 
 </launch>
