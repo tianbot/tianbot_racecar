@@ -36,5 +36,8 @@
 *.swp
 
 
-# specific cfg
+# python compiled
 *.pyc
+
+# speciic cfg
+99.my_racecar.sh.em
