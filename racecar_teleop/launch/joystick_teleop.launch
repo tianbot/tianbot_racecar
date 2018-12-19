@@ -8,7 +8,7 @@
     <node pkg="racecar_teleop" type="racecar_joy.py" name="racecar_joy">
         <!-- for logitech, check if the joypad is set to d mode -->
         <param name="joy_mode" value="D" />
-        <param name="throttle_scale" value="0.4" type="double"/>
+        <param name="throttle_scale" value="0.6" type="double"/>
         <param name="servo_scale" value="0.8" type="double"/>
     </node>
 </launch>

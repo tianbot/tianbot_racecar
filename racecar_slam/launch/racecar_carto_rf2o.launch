@@ -19,7 +19,7 @@
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find racecar_slam)/configuration_files
-          -configuration_basename test_tianbot_racecar.lua"
+          -configuration_basename tianbot_racecar_rf2o.lua"
       output="screen">
     <remap from="/odom" to="/odometry/filtered"/>
     <remap from="imu" to="/imu_data"/>
