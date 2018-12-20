@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 
 <launch>
-    <arg name="use_rviz" default="false" />
 
     <!-- Navstack -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base">
@@ -28,6 +27,4 @@
         <remap from="/move_base_node/NavfnROS/plan" to="/move_base/NavfnROS/plan" /> 
     </node>
 
-    <!-- Rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tianbot_racecar)/rviz_cfg/tianbot_amcl.rviz" if="$(arg use_rviz)" />
 </launch>
