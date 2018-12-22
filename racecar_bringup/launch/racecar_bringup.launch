@@ -4,6 +4,7 @@
     <include file="$(find racecar_teleop)/launch/joystick_teleop.launch" />
     <include file="$(find racecar_bringup)/launch/lidar.launch" />
     <include file="$(find racecar_bringup)/launch/rgbd_camera.launch" />
+    <include file="$(find racecar_bringup)/launch/gps.launch" />
   
     <!-- ODOMETRY -->
     <!--rf2o_Laser_Odometry -->
