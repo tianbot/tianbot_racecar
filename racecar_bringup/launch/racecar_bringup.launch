@@ -1,9 +1,12 @@
+<?xml version="1.0"?>
+
 <launch>
     <include file="$(find racecar_description)/launch/tianbot_racecar_tf.launch" />
     <include file="$(find racecar_core)/launch/racecar_core.launch" />
     <include file="$(find racecar_teleop)/launch/joystick_teleop.launch" />
     <include file="$(find racecar_bringup)/launch/lidar.launch" />
     <include file="$(find racecar_bringup)/launch/rgbd_camera.launch" />
+    <include file="$(find racecar_bringup)/launch/gps.launch" />
   
     <!-- ODOMETRY -->
     <!--rf2o_Laser_Odometry -->
