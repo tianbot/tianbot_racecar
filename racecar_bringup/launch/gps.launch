@@ -4,7 +4,7 @@
   <arg name="gps" default="$(optenv TIANBOT_RACECAR_GPS none)" />
 
   <node pkg="nmea_navat_driver" type="nmea_serial_driver" name="tianbot_racecar_gps" if="$(eval gps=='nmea0183')" >
-    <param name="port" value="/dev/ttyUSB2" />
+    <param name="port" value="/dev/tianbot_racecar_gps" />
     <param name="baud" value="38400" />
   </node>
 </launch>
