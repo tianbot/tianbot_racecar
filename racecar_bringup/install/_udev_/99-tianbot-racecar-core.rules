@@ -1,0 +1,1 @@
+KERNEL=="ttyUSB*", ENV{ID_SERIAL_SHORT}=="3503[0-9]*0001", MODE:="0666", GROUP:="dialout",  SYMLINK+="tianbot_racecar_core"
