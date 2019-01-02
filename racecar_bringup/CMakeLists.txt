@@ -109,9 +109,11 @@ catkin_package(
 #  DEPENDS system_lib
 )
 
-catkin_add_env_hooks(99.my_racecar SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
-
-
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/99.my_racecar.sh.em")
+  catkin_add_env_hooks(99.my_racecar SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+else()
+  catkin_add_env_hooks(99.tianbot_racecar SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+endif()
 ###########
 ## Build ##
 ###########
