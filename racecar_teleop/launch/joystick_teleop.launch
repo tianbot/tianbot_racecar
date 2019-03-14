@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 
 <launch>
+    <arg name="joy_mode" default="$(optenv TIANBOT_RACECAR_JOY X)" />
     <node pkg="joy" type="joy_node" name="joystick">
         <param name="dev" value="/dev/tianbot_racecar_joystick" />
     </node>
 
     <node pkg="racecar_teleop" type="racecar_joy.py" name="racecar_joy">
         <!-- for logitech, check if the joypad is set to d mode -->
-        <param name="joy_mode" value="D" />
+        <param if="$(eval joy_mode=='X')" name="joy_mode" value="X" />
         <param name="throttle_scale" value="0.6" type="double"/>
         <param name="servo_scale" value="0.8" type="double"/>
     </node>
