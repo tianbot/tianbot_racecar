@@ -5,7 +5,7 @@
 - git:
     local-name: realsense2_camera
     uri: https://github.com/intel-ros/realsense.git
-    version: 2.1.2
+    version: 2.2.3
 - git:
     local-name: rf2o_laser_odometry
     uri: https://github.com/tianb03/rf2o_laser_odometry.git
