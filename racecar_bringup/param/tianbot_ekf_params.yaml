@@ -15,10 +15,10 @@ publish_tf: true
 # Whether to publish the acceleration state. Defaults to false if unspecified.
 publish_acceleration: false
 
-map_frame: /map              # Defaults to "map" if unspecified
-odom_frame: /odom            # Defaults to "odom" if unspecified
-base_link_frame: /base_footprint  # Defaults to "base_link" if unspecified
-world_frame: /odom           # Defaults to the value of odom_frame if unspecified
+map_frame: map              # Defaults to "map" if unspecified
+odom_frame: odom            # Defaults to "odom" if unspecified
+base_link_frame: base_footprint  # Defaults to "base_link" if unspecified
+world_frame: odom           # Defaults to the value of odom_frame if unspecified
 
 # The filter accepts an arbitrary number of inputs from each input message type (nav_msgs/Odometry,
 # geometry_msgs/PoseWithCovarianceStamped, geometry_msgs/TwistWithCovarianceStamped,

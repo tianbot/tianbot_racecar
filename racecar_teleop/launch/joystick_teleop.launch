@@ -3,7 +3,7 @@
 <launch>
     <arg name="joy_mode" default="$(optenv TIANBOT_RACECAR_JOY X)" />
     <node pkg="joy" type="joy_node" name="joystick">
-        <param name="dev" value="/dev/tianbot_racecar_joystick" />
+        <param name="dev" value="/dev/tianbot_joystick" />
     </node>
 
     <node pkg="racecar_teleop" type="racecar_joy.py" name="racecar_joy">
