@@ -3,7 +3,7 @@
 <launch>
     <arg name="servo_reverse"  default="$(optenv TIANBOT_RACECAR_STEERING_REVERSE normal)" />
     <arg name="motor_reverse"  default="$(optenv TIANBOT_RACECAR_THROTTLE_REVERSE normal)" />
-    <arg name="serial_port"           default="$(optenv TIANBOT_RACECAR_PORT /dev/ttyUSB1)" />
+    <arg name="serial_port"           default="$(optenv TIANBOT_RACECAR_BASE_PORT /dev/ttyUSB1)" />
 
     <node pkg="racecar_core" type="tianbot_racecar_node.py" name="racecar_node">
         <param name="port" value="$(arg serial_port)"/>
