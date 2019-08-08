@@ -39,6 +39,9 @@
 # python compiled
 *.pyc
 
+# map file
+*.pgm
+
 # speciic cfg
 99.my_racecar.sh.em
 
