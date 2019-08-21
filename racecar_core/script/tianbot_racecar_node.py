@@ -30,7 +30,7 @@ class TianBot_RACECAR_Class(object):
         self._robot_heading = 0
 
         # Get serial port and baud rate of Tiva C TianBot_RACECAR
-        port = rospy.get_param("~port", "/dev/ttyUSB0")
+        port = rospy.get_param("~port", "/dev/ttyUSB1")
         baudRate = int(rospy.get_param("~baudrate", 115200))
         self._servo_direction = int(rospy.get_param("~servo_direction", 1))
         self._motor_direction = int(rospy.get_param("~motor_direction", 1))
@@ -98,9 +98,19 @@ class TianBot_RACECAR_Class(object):
                     self._battery_pub.publish(self._battery_value)
 
                 if lineParts[0] == 'i':
-                    self._qx, self._qy, self._qz, self._qw, \
-                    self._gx, self._gy, self._gz, \
-                    self._ax, self._ay, self.az = [float(i) for i in lineParts[1:11]]
+#                    self._qx, self._qy, self._qz, self._qw, \
+#                    self._gx, self._gy, self._gz, \
+#                    self._ax, self._ay, self.az = [float(i) for i in lineParts[1:11]]
+                    self._qx = float(lineParts[1])
+                    self._qy = float(lineParts[2])
+                    self._qz = float(lineParts[3])
+                    self._qw = float(lineParts[4])
+                    self._gx = float(lineParts[5])
+                    self._gy = float(lineParts[6])
+                    self._gz = float(lineParts[7])
+                    self._ax = float(lineParts[8])
+                    self._ay = float(lineParts[9])
+                    self._az = float(lineParts[10])
 
                     imu_msg = Imu()
                     header = Header()
